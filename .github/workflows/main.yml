@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
-    - run: pip install pre-commit-mirror-maker
+    - run: pip install 'pre-commit-mirror-maker==1.9.0'
     - run: git config --global user.name 'Github Actions'
     - run: git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
     - run: pre-commit-mirror . --language=python --package-name=clang-format --id=clang-format --entry='clang-format -i' --types-or c++ --types-or c --types-or 'c#' --types-or 'cuda' --types-or 'java' --types-or 'javascript' --types-or 'json' --types-or 'objective-c' --types-or 'proto' --args=-style=file
